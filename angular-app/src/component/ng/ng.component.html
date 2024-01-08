@@ -1,0 +1,60 @@
+<p>ng works!</p>
+  <!-- *ngFor -->
+  <ul>
+    <li *ngFor ="let names of namesArray">
+   {{names}}
+   </li>
+<!-- <div ngFor="let names of namesArray">{{namesArray}}</div>  -->
+<!-- <h1>Let's see which is color</h1>  -->
+
+<!-- *ngIf -->
+<!-- <h1>Example of *ngIf</h1>
+<div *ngIf="number%2===0">
+   <h1>Sum</h1>
+</div>
+<div *ngIf="number">
+<h1>Odd</h1>
+</div>  -->
+
+
+<!-- ng-template -->
+<!-- <div *ngIf="number%2===0; then isEven else isOdd"></div>
+
+<ng-template #isEven>
+   <h3>Value is even</h3>
+</ng-template>
+<ng-template #isOdd>
+   <h3>Value is Odd</h3>
+</ng-template> -->
+
+<h1>The number {{ number }} is {{ isEven() ? 'even' : 'odd' }}</h1>
+
+<html>  
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>  
+<body ng-app="">  
+Choose your favorite topic:  
+<select ng-model="myVar">  
+  <option value="animals">Zoology  
+  <option value="tuts">Tutorials  
+  <option value="cars">Cars  
+  <option value="bikes">Bikes  
+</select>  
+<hr>  
+<div ng-switch="myVar">  
+  <div ng-switch-when="animals">  
+     <h1>Zoology</h1>  
+     <p>Welcome to a world of zoology.</p>  
+  </div>  
+  <div ng-switch-when="tuts">  
+     <h1>Tutorials</h1>  
+     <p>Learn from examples.</p>  
+  </div>  
+  
+  <div ng-switch-default>  
+     <h1>Switch</h1>  
+     <p>Select topic from the dropdown, to switch the content of this DIV.</p>  
+  </div>  
+</div>  
+<hr>  
+</body>  
+</html>  
