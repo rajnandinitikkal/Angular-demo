@@ -1,11 +1,11 @@
-import { NgClass } from '@angular/common';
+import { NgClass,NgStyle } from '@angular/common';
 import { Component ,OnInit} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-two-way-data',
   standalone: true,
-  imports: [FormsModule,NgClass],
+  imports: [FormsModule,NgClass,NgStyle],
   templateUrl: './two-way-data.component.html',
   styleUrl: './two-way-data.component.css'
 })
@@ -23,7 +23,7 @@ onKey(){
   console.log(this.numberData)
 }
 
-// isActive:boolean=true
+isActive:boolean=true
 
 
 }

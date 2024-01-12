@@ -1,15 +1,17 @@
 import { Component,ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 import {FirstDemoComponent} from '../component/first-demo/first-demo.component';
 import { FormsModule } from '@angular/forms';
 import { TwoWayDataComponent } from '../component/two-way-data/two-way-data.component';
 import { NgComponent } from '../component/ng/ng.component';
+import { HelloComponent } from '../component/hello/hello.component';
+import { RoutesComponent } from '../component/routes/routes.component';
+import { Router,RouterOutlet,RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,FirstDemoComponent,FormsModule,TwoWayDataComponent,NgComponent ],
+  imports: [CommonModule, RouterOutlet,FirstDemoComponent,FormsModule,TwoWayDataComponent,NgComponent,HelloComponent ,RoutesComponent,RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -30,4 +32,12 @@ export class AppComponent {
 //   }
 // messageFromChild:string|undefined
   
-}
+// constructor(private routes:Router){}
+//   onClickRouterDemo(){
+//     this.routes.navigate(["/Demo"])
+//   }
+//   onClickHello(){
+//     this.routes.navigateByUrl("/hello");
+//   }
+
+// }
